@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forensic Department</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <h1>Forensic Department</h1>
+  <h1>Closed Cases</h1>
+  <div>
+    <a href="./closedcase2.html" type="button" class="btn">Case 2</a>
+    <a href="./closedcase3.html" type="button" class="btn-submit">Case 3</a>
+    <input type="button" id="return" class="return" value="Return to Menu" style="display:none" onclick="returnToMenu()">
+  </div>
+
+  <script>
+    function returnToMenu() {
+      window.location.href = "./index.html";
+    }
+
+    // To make the button visible for testing purposes, you can use this line of code.
+    document.getElementById('return').style.display = 'inline';
+  </script>
+  
+  <script src="./script.js"></script>
+</body>
+</html>

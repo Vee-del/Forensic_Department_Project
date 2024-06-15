@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Forensic Department</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Forensic Department</h1>
+<h1>  Open Cases</h1>
+<div>
+  
+  <!-- <button id= "btn" class="btn" onclick>Case 1</button> -->
+  <a href="./case1.html" type="button" class="btn">Case 1</a>
+  
+  <!-- <button id= "btn" class="btn" onclick>Case 4</button> -->
+  <a href="./case4.html" type="button" class="btn-submit">Case 4</a>
+  
+  <!-- <button id= "btn-7" class="btn-cancel" onclick>Case 7</button> -->
+  <a href="./case7.html" type="button" class="btn-cancel">Case 7</a>
+  <input type="button" id="return" class="return" value="Return to Menu" style="display:none" onclick="returnToMenu()"> 
+        
+</div>
+
+<script>
+  function returnToMenu() {
+    window.location.href = "./index.html";
+  }
+
+  document.getElementById('return').style.display = 'inline';
+</script>
+
+<script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<head> 
+  <title> Case robbery </title>
+</head>
+ <body>
+<h1> The Downtown Bank Robbery</h1>
+
+<div> 
+  <h5> 
+     <input type="button" class="introduction" id="introduction" value="Case Introduction" onclick/>
+  <input type="button" class="equipe" id="equipe" value="Case Handlers" onclick="doFunction();"  />
+ <input type="button" class="btn-investigation" id="investigation" value="Start Investigation" onclick />
+    </div>
+   <h6> <div id="staff"  style="display:none">
+
+   <img src="https://i.pinimg.com/564x/4e/15/fe/4e15fe76ee22e6d21418bf25de57ccc1.jpg" id ="Yugito">
+       <img src="https://i.pinimg.com/564x/4e/15/fe/4e15fe76ee22e6d21418bf25de57ccc1.jpg"  id ="y">
+ 
+     </h6>
+       <div>
+      <h3 id="intro" style="display:none"> On May 1, 2024, at approximately 2:00 PM, an armed robbery occurred at the Downtown National Bank located at 789 Central Avenue. </h3>
+    
+     <h3 id="resume" style="display:none">According to the investigation,Three masked individuals entered the bank, brandishing firearms, and forced the staff to open the vault. They escaped with an estimated $200,000 in cash. No injuries were reported, but the suspects managed to evade capture. </h3>
+
+     <input type="button"  class="days" id="one" value="Day 1" onclick="doFunction();"  />
+   <h4 id="temp" style="display:none"></h4> <h3 id="day_one" style="display:none"> Date: May 1, 2024
+    Bank manager Sarah White called 911 to report the robbery.
+    Detective Alex Johnson and Forensic Investigator Emily Harris arrived at the scene with a crime scene unit.
+    The scene was secured and all bank employees and customers were interviewed.
+    CCTV footage from the bank’s security cameras was collected.
+    Fingerprints were lifted from the vault, counters, and doors.
+    Bullet casings from warning shots fired by the robbers were collected and sent to the lab for analysis.</h3> 
+    <input type="button" class="days" id="two" value="Day 2" onclick="doSFunction();"  />
+   <h4 id="temp2" style="display:none"></h4><h3 id="day_two"  style="display:none"> Date: May 2, 2024
+    Fingerprints collected from the scene were sent to the forensic lab for analysis.
+    CCTV footage was reviewed to identify suspects and their actions during the robbery.
+    Witnesses provided descriptions of the robbers' clothing and any distinguishing features.
+    A composite sketch of one of the robbers was created based on witness descriptions. </h3> 
+    <input type="button" class="days" id="three" value="Day 3" onclick="doSFunction();"  /><h4 id="temp3" style="display:none"></h4> <h3 id="day_three" style="display:none"> Date: May 3, 2024
+      Preliminary fingerprint analysis revealed partial matches but no direct hits in the criminal database.
+      A public appeal was made, showing the composite sketch and CCTV images, asking for information leading to the identification of the suspects.
+      Anonymous tips were received, pointing towards a possible suspect known to frequent the area around the bank. </h3> 
+       <input type="button" class="days" id="four" value="Day 4" onclick="doSFunction();"  />  <h4 id="temp4" style="display:none"></h4> <h3 id="day_four" style="display:none"> Date: May 4, 2024
+        Surveillance was initiated on the suspected individual based on anonymous tips.
+        Investigators collected additional CCTV footage from nearby businesses, trying to track the suspects' movements before and after the robbery.
+        One of the suspects was seen entering a vehicle; the license plate was partially visible and traced to a rental car agency.</h3> 
+       <input type="button"class="days" id="five" value="Day 5" onclick="doSFunction();"  /> <h4 id="temp5" style="display:none"></h4>  <h3 id="day_five" style="display:none">Date: May 5, 2024
+        A search warrant was obtained for the rental car associated with the suspects.
+        The vehicle was located and searched, revealing traces of cash and a map with the bank circled.
+        GPS data from the rental car provided a route, leading to a potential hideout location on the outskirts of the city.</h3> <h4 id="temp" style="display:none"></h4>
+       <input type="button"class="days" id="six" value="Day 6" onclick="doSFunction();" /> 
+    <h4 id="temp6" style="display:none"></h4> <h3 id="day_six"  style="display:none"> Date: May 6, 2024
+      A stakeout was conducted at the potential hideout location.
+      Two suspects matching the descriptions from the robbery were seen entering the building.
+      Police planned a tactical approach to ensure the safety of officers and bystanders during the confrontation. </h3>
+       <input type="button"class="days" id="seven" value="Day 7" onclick="doSFunction();"  />
+    <h4 id="temp7" style="display:none"></h4>
+     <h3 id="day_seven"style="display:none"> Date: May 7, 2024
+      A tactical team executed a raid on the hideout location.
+      Two suspects were apprehended without incident; a third suspect managed to escape.
+      Cash matching the stolen amount from the bank was recovered, along with firearms matching the description from witnesses.
+      Forensic Investigator Emily Harris collected fingerprints, DNA samples, and other physical evidence from the hideout.
+      The arrested suspects were taken in for interrogation, but both refused to cooperate.</h3>
+ 
+  <input type="button"class="resolution" id="resolution" value="Resolution" onclick="doSFunction();"  />
+    <h4 id="tempR" style="display:none"></h4>
+     <h3 id="day_resolution"style="display:none"> The case remains open as investigators continue to search for the third suspect and gather more evidence. The forensic team is analyzing the newly collected evidence to establish stronger connections to the robbery and potentially identify the third individual.
+</h3>
+<input type="button" id="return" class="return" value="Back" style="display:none" onclick="returnToMenu()">
+<script>
+  function returnToMenu() {
+    window.location.href = "./opencases.html";
+  }
+
+  // To make the button visible for testing purposes, you can use this line of code.
+  document.getElementById('return').style.display = 'inline';
+</script>  
+         
+    
+ 
+  <script>
+    document.getElementById("equipe").onclick = function () {
+document.getElementById("staff").style.display = "inline";   
+     document.getElementById("intro").style.display = "none";
+   document.getElementById("resume").style.display = "none";  
+}
+document.getElementById("introduction").onclick = function () { 
+  document.getElementById("staff").style.display = "none";
+   document.getElementById("resume").style.display = "none";
+    document.getElementById("intro").style.display = "inline";
+ 
+};
+
+document.getElementById("investigation").onclick = function () { 
+  document.getElementById("staff").style.display = "none";
+   document.getElementById("intro").style.display = "none";
+   document.getElementById("resume").style.display = "inline";
+};
+    
+document.getElementById("one").onclick = function () {
+ document.getElementById("temp").style.display = "inline"; document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("june 29, 2021 00:00:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function () {
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("temp").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_one").style.display = "inline";
+      document.getElementById("temp").innerHTML = "";
+      
+    }
+  }, 1000);
+};
+document.getElementById("two").onclick = function () {
+ document.getElementById("temp2").style.display = "inline";  document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("june 30, 2021 00:00:00").getTime();
+
+  var x = setInterval(function () {
+   
+    var now = new Date().getTime();
+
+    
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+    document.getElementById("temp2").innerHTML =
+     days + "d " +  hours + "h " + minutes + "m " + seconds + "s ";
+
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_two").style.display = "inline";
+      document.getElementById("temp2").innerHTML = "";
+     
+    }
+   
+  }, 1000);
+};
+document.getElementById("three").onclick = function () {
+ document.getElementById("temp3").style.display = "inline";  document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("September 01, 2021 00:00:00").getTime();
+
+  var x = setInterval(function () {
+   
+    var now = new Date().getTime();
+
+    
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+    document.getElementById("temp3").innerHTML =
+     days + "d " +  hours + "h " + minutes + "m " + seconds + "s ";
+
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_three").style.display = "inline";
+      document.getElementById("temp3").innerHTML = "";
+     
+    }
+   
+  }, 1000);
+};
+document.getElementById("four").onclick = function () {
+ document.getElementById("temp4").style.display = "inline";  document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("September 02, 2021 00:00:00").getTime();
+
+  var x = setInterval(function () {
+   
+    var now = new Date().getTime();
+
+    
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+    document.getElementById("temp4").innerHTML =
+   days + "d " +    hours + "h " + minutes + "m " + seconds + "s ";
+
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_four").style.display = "inline";
+      document.getElementById("temp4").innerHTML = "";
+    
+    }
+   
+  }, 1000);
+};
+document.getElementById("five").onclick = function () { 
+  document.getElementById("temp5").style.display = "inline"; document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("September 02, 2021 00:00:00").getTime();
+
+  var x = setInterval(function () {
+   
+    var now = new Date().getTime();
+
+    
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+    document.getElementById("temp5").innerHTML =
+     days + "d " +  hours + "h " + minutes + "m " + seconds + "s ";
+
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_five").style.display = "inline";
+      document.getElementById("temp5").innerHTML = "";
+    
+    }
+   
+  }, 1000);
+};
+document.getElementById("six").onclick = function () { 
+  document.getElementById("temp6").style.display = "inline"; document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("September 03, 2021 00:00:00").getTime();
+
+  var x = setInterval(function () {
+   
+    var now = new Date().getTime();
+
+    
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+    document.getElementById("temp6").innerHTML =
+      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_six").style.display = "inline";
+      document.getElementById("temp6").innerHTML = "";
+    
+    }
+   
+  }, 1000);
+};
+document.getElementById("seven").onclick = function () { 
+  document.getElementById("temp7").style.display = "inline";
+  document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("September 04, 2021 00:00:00").getTime();
+
+  var x = setInterval(function () {
+   
+    var now = new Date().getTime();
+
+    
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+    document.getElementById("temp7").innerHTML =
+     days + "d " +  hours + "h " + minutes + "m " + seconds + "s ";
+
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_seven").style.display = "inline";
+      document.getElementById("temp7").innerHTML = "";
+   
+    }
+   
+  }, 1000);
+};
+    
+ document.getElementById("resolution").onclick = function () { 
+  document.getElementById("tempR").style.display = "inline";
+  document.getElementById("staff").style.display = "none";
+
+  var countDownDate = new Date("JUNE 04, 2021 00:00:00").getTime();
+
+  var x = setInterval(function () {
+   
+    var now = new Date().getTime();
+
+    
+    var distance = countDownDate - now;
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  
+    document.getElementById("tempR").innerHTML =
+     days + "d " +  hours + "h " + minutes + "m " + seconds + "s ";
+
+   
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("day_resolution").style.display = "inline";
+      document.getElementById("tempR").innerHTML = "";
+   
+    }
+   
+  }, 1000);
+};   
+    
+ </script>
+    
+      <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Monoton|Quantico:700');
+
+
+
+h1 {
+  color: white;
+font-variant: small-caps;
+    font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center
+}
+body {
+  background-color: #000000;
+     font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+
+}
+
+div {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.equipe {
+  font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center;
+  width: 280px;
+  margin: 10px;
+  border: 2px solid #C33764;
+  padding: 8px 10px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+    color: #C33764;
+  background-color: #000000;
+    transition: all 0.25s ease-in-out;
+   
+
+}
+
+.btn-investigation {
+      font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center;
+  width: 280px;
+  margin: 10px;
+  border: 2px solid #F2994A;
+  padding: 8px 10px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+    color: #F2994A;
+  background-color: #000000;
+    transition: all 0.25s ease-in-out;
+        }
+
+  .introduction {
+      font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center;
+  width: 280px;
+  margin: 10px;
+  border: 2px solid #155799;
+  padding: 8px 10px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+    color: #155799;
+  background-color: #000000;
+    transition: all 0.25s ease-in-out;
+}
+h2{
+  text-align: center;
+  color: white;
+  font-size:18px;
+
+}
+h3{
+  text-align: center;
+  color: white;
+  font-size:15px;
+}
+   .days{
+      font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center;
+  width: 50px;
+  margin: 8px;
+  border: 2px solid white;
+  padding: 8px 8px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+    color: white;
+  background-color: #000000;
+        }
+        
+         .resolution{
+      font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center;
+  width: 100px;
+  margin: 8px;
+  border: 2px solid #98fb98;
+  padding: 8px 8px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+    color: #98fb98;
+  background-color: #000000;
+        }
+    </style>

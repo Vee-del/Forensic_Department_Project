@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Monoton|Quantico:700');
+// variables
+$cancel: #C33764;
+$secondary: #F2994A;
+$standard: #155799;
+$submit: #159957;
+$employees:#c1502e;
+$central:white;
+$black: #000000;
+$JU: #C33764;
+$transition: all 0.25s ease-in-out;
+
+// mixin
+@mixin mybutton($color_1, $color_2) {
+  width: 250px;
+  margin: 10px;
+  border: 2px solid $color_1;
+  padding: 6px 24px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+	color: $color_1;
+  background-color: $color_2;
+	transition: $transition;
+	&:hover {
+		background-color: $color_1;
+		border-color: $color_1;
+		color: $color_2;
+	}
+	&:active {
+		background-color: $color_1;
+		border-color: $color_1;
+		color: $color_2;
+		box-shadow: none;
+	}
+	&:focus, &:active:focus {
+		background-color: $color_1;
+		border-color: $color_1;
+		color: $color_2;
+		outline: 5px auto $color_1;
+	}
+	&:visited {
+		background-color: $color_1;
+		border-color: $color_1;
+	}
+}
+
+// styles
+* {
+font-variant: small-caps;
+	font-family: 'Audiowide';
+  font-weight: 500;
+}
+h1 {
+  color: white;
+font-variant: small-caps;
+	font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center
+}
+body {
+  background-color: #000000;
+ 
+
+}
+
+div {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  @include mybutton($standard, $black);
+}
+
+.btn-open {
+  @include mybutton($secondary, $black);
+}
+
+.btn-submit {
+  @include mybutton($submit, $black);
+} 
+
+.btn-cancel {
+  @include mybutton($cancel, $black);
+}
+
+.btn-employees {
+  @include mybutton($employees, $black);
+}
+.btn-central {
+  @include mybutton ($central, $black);
+}
+h6{
+  text-align: right;
+  color: white;
+  position:fixed;
+    bottom:0;
+    width:98%;
+}

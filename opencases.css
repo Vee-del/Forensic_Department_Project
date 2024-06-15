@@ -1,0 +1,113 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Monoton|Quantico:700');
+
+// variables
+$cancel: #C33764;
+$secondary: #F2994A;
+$standard: #155799;
+$submit: #159957;
+$employees: #c1502e;
+$central: white;
+$black: #000000;
+$white: white;
+$transition: all 0.25s ease-in-out;
+
+// Mixin
+@mixin mybutton($color_1) {
+  width: 250px;
+  margin: 10px;
+  border: 2px solid $color_1;
+  padding: 6px 24px;
+  font-size: 1.15em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+	color: $color_1;
+	transition: $transition;
+	&:hover {
+		background-color: $color_1;
+		border-color: $color_1;
+		color: $color_1; // Change text color on hover for better contrast
+	}
+	&:active {
+		background-color: $color_1;
+		border-color: $color_1;
+		color: $color_1;
+		box-shadow: none;
+	}
+	&:focus, &:active:focus {
+		background-color: $color_1;
+		border-color: $color_1;
+		color: $color_1;
+		outline: 5px auto $color_1;
+	}
+	&:visited {
+		background-color: $color_1;
+		border-color: $color_1;
+	}
+}
+
+// styles
+* {
+font-variant: small-caps;
+	font-family: 'Audiowide';
+  font-weight: 500;
+}
+h1 {
+  color: white;
+font-variant: small-caps;
+	font-family: 'Audiowide';
+  text-transform: uppercase;
+  text-align: center
+}
+body {
+  background-color: #000000;
+ 
+
+}
+
+div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.btn-2, .btn-7, .btn  {
+  @include mybutton($secondary);
+}
+
+.btn-3,.btn-9 {
+  @include mybutton($submit);
+} 
+
+.btn-4, .btn-8, .btn-10 {
+  @include mybutton($cancel);
+}
+
+.btn-5 {
+  @include mybutton($employees);
+}
+.btn-6, .return{
+  @include mybutton ($cancel);
+}
+h6{
+  text-align: right;
+  color: white;
+  position:absolute;
+    bottom:0;
+    width:98%;
+}
+
+p{
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
